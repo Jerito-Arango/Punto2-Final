@@ -64,16 +64,16 @@ resource "aws_glue_catalog_table" "entregas" {
   description   = "Intentos de entrega en CSV, particionados por fecha con partition projection"
 
   parameters = {
-    "EXTERNAL"                        = "TRUE"
-    "classification"                  = "csv"
-    "skip.header.line.count"          = "1"
-    "projection.enabled"              = "true"
-    "projection.fecha.type"           = "date"
-    "projection.fecha.format"         = "yyyy-MM-dd"
-    "projection.fecha.range"          = "${var.fecha_inicio},${var.fecha_fin}"
-    "projection.fecha.interval"       = "1"
-    "projection.fecha.interval.unit"  = "DAYS"
-    "storage.location.template"       = "${local.ubicacion_datos}fecha=$${fecha}/"
+    "EXTERNAL"                       = "TRUE"
+    "classification"                 = "csv"
+    "skip.header.line.count"         = "1"
+    "projection.enabled"             = "true"
+    "projection.fecha.type"          = "date"
+    "projection.fecha.format"        = "yyyy-MM-dd"
+    "projection.fecha.range"         = "${var.fecha_inicio},${var.fecha_fin}"
+    "projection.fecha.interval"      = "1"
+    "projection.fecha.interval.unit" = "DAYS"
+    "storage.location.template"      = "${local.ubicacion_datos}fecha=$${fecha}/"
   }
 
   partition_keys {
@@ -90,8 +90,8 @@ resource "aws_glue_catalog_table" "entregas" {
       name                  = "csv"
       serialization_library = "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe"
       parameters = {
-        "field.delim"                     = ","
-        "serialization.format"            = ","
+        "field.delim"          = ","
+        "serialization.format" = ","
       }
     }
 

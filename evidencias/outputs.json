@@ -1,0 +1,42 @@
+{
+  "base_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas_jero_db"
+  },
+  "bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas-jero-eia-20261112"
+  },
+  "bucket_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:s3:::entregas-jero-eia-20261112"
+  },
+  "region": {
+    "sensitive": false,
+    "type": "string",
+    "value": "us-east-2"
+  },
+  "tabla": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas"
+  },
+  "ubicacion_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://entregas-jero-eia-20261112/entregas/"
+  },
+  "ubicacion_resultados_athena": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://entregas-jero-eia-20261112/resultados-athena/"
+  },
+  "workgroup": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas_jero_wg"
+  }
+}
