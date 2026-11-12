@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform.tfstate.lock.info
+crash.log
+*.tfvars
+!ejemplo.tfvars
+*.tfplan
+
+# Credenciales
+.aws/
+credentials
+*.pem
+*.key
+.env
